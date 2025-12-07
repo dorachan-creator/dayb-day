@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Surprise for You</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      text-align: center;
+      padding: 40px;
+      color: #333;
+    }
+    h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 18px;
+      width: 80%;
+      margin: auto;
+      line-height: 1.6;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      width: 85%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 22px;
+      background: #ff5f6d;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: #ff303f;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 A Little Surprise 🎉</h1>
+  <div class="card">
+    <p>
+      Sometimes, we forget how amazing we truly are. So this little surprise page is just here to remind you:<br><br>
+      You are valued. You are appreciated. You matter more than you realize.
+      <br><br>
+      Whatever you're going through, whatever challenges you're facing — you're doing great, honestly.
+      Keep going, keep shining.
+    </p>
+    <a class="btn" href="index.html">Go Back</a>
+    <p style="margin-top:30px; font-size:1.3rem; line-height:1.8;">
+      <strong>FOUR MOST BEAUTIFUL THINGS IN THE WORLD</strong><br>
+      BUTTERFLY<br>
+      MOON<br>
+      RAINBOW<br>
+      FLOWER<br><br>
+      YOU THOUGHT I’D SAY "YOU" BUT…<br><br>
+      BUT YOU'RE NOT BEAUTIFUL —<br><br>
+      YOU ARE:<br>
+      GORGEOUS 🌸<br>
+      STUNNING ✨<br>
+      ELEGANT 💐<br>
+      RADIANT 🌟<br>
+      LOVELY 💖<br>
+      ATTRACTIVE 💞<br>
+      CHARMING 💫<br>
+      EXQUISITE 🌺<br>
+      PRETTY 💕<br>
+      BREATHTAKING 🌷<br>
+      BEAUTIFUL 🌙<br>
+      CUTIE 🧸<br>
+      POOKIE 🐣<br>
+      LUCKY CHARM 🍀<br>
+      QUEEN 👑<br>
+      PRINCESS 🩷<br>
+      PEACE 🕊️<br>
+    </p>
+    <p class="poem">
+      FOUR MOST BEAUTIFUL THINGS IN THE WORLD<br>
+      BUTTERFLY<br>
+      MOON<br>
+      RAINBOW<br>
+      FLOWER<br><br>
+      YOU THOUGHT I’LL SAY “YOU” BUT…<br><br>
+      BUT YOU'RE NOT BEAUTIFUL<br><br>
+      YOU ARE:<br>
+      GORGEOUS<br>
+      STUNNING<br>
+      ELEGANT<br>
+      RADIANT<br>
+      LOVELY<br>
+      ATTRACTIVE<br>
+      CHARMING<br>
+      EXQUISITE<br>
+      PRETTY<br>
+      BREATHTAKING<br>
+      BEAUTIFUL<br>
+      CUTIE<br>
+      POOKIE<br>
+      LUCKY CHARM<br>
+      QUEEN<br>
+      PRINCESS<br>
+      PEACE<br>
+    </p>
+  </div>
+  <!-- Decorative balloons -->
+  <div class="balloons">
+    <div class="balloon b1">🎈</div>
+    <div class="balloon b2">🎈</div>
+    <div class="balloon b3">🎈</div>
+    <div class="balloon b4">🎈</div>
+    <div class="balloon b5">🎈</div>
+  </div>
+
+  <!-- Music player (user can play) -->
+  <div style="position:fixed;left:16px;bottom:16px;z-index:9999;">
+    <button id="playBtn" class="btn">Play Music</button>
+    <audio id="bgMusic" loop>
+      <!-- If you want a music file, replace src with your file name (e.g., "music.mp3") -->
+      <source src="" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+
+  <!-- Confetti + soft animations -->
+  <style>
+    .balloons { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 800; }
+    .balloon { position: absolute; font-size: 36px; opacity: 0.95; transform-origin: bottom center; }
+    .b1 { left: 8%; top: 20%; animation: floatBalloon 6s ease-in-out infinite; }
+    .b2 { left: 70%; top: 10%; animation: floatBalloon 7s ease-in-out 0.3s infinite; }
+    .b3 { left: 40%; top: 25%; animation: floatBalloon 5.5s ease-in-out 0.5s infinite; }
+    .b4 { left: 85%; top: 30%; animation: floatBalloon 6.5s ease-in-out 0.8s infinite; }
+    .b5 { left: 20%; top: 40%; animation: floatBalloon 7.2s ease-in-out 1s infinite; }
+
+    @keyframes floatBalloon {
+      0% { transform: translateY(0) scale(0.95); opacity: 0.95; }
+      50% { transform: translateY(-20px) scale(1.05); }
+      100% { transform: translateY(0) scale(0.95); }
+    }
+
+    /* Fancy poem styles */
+    .poem { margin-top: 25px; font-size: 1.2rem; line-height: 1.7; text-align: center; color: #333; }
+    .poem strong { display:block; font-size:1.4rem; margin-bottom:10px; }
+    .poem .highlight { color: #c2185b; font-weight:700; font-size:1.25rem; }
+
+    /* Confetti pieces */
+    .confetti-piece { position: fixed; top: -10px; width: 10px; height: 14px; opacity: 0.9; z-index: 700; }
+  </style>
+
+  <script>
+    // confetti
+    (function(){
+      for (let i = 0; i < 50; i++) {
+        let c = document.createElement('div');
+        c.className = 'confetti-piece';
+        c.style.left = Math.random() * 100 + 'vw';
+        c.style.background = 'hsl(' + Math.random()*360 + ', 90%, 65%)';
+        c.style.transform = 'rotate(' + Math.random()*360 + 'deg)';
+        c.style.animation = 'confettiFall ' + (2 + Math.random()*3) + 's linear ' + Math.random() + 's infinite';
+        document.body.appendChild(c);
+      }
+    })();
+
+    // music play
+    document.addEventListener('DOMContentLoaded', function(){
+      const btn = document.getElementById('playBtn');
+      const audio = document.getElementById('bgMusic');
+      btn.addEventListener('click', function(){
+        if (!audio.src) {
+          alert('No music file linked. To add music, upload an mp3 and set the source in the surprise.html code.');
+          return;
+        }
+        if (audio.paused) { audio.play(); btn.textContent = 'Pause Music'; }
+        else { audio.pause(); btn.textContent = 'Play Music'; }
+      });
+    });
+  </script>
+
+</body>
+</html>
