@@ -1,193 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Surprise for You</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Surprise 🎁</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      text-align: center;
-      padding: 40px;
-      color: #333;
+    :root{
+      --card-width: 95%;
+      --card-max: 700px;
+      --accent: #d10063;
+      --muted: #555;
     }
-    h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;
+      background: linear-gradient(135deg,#ffdde1,#ee9ca7);
+      color:var(--muted);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
     }
-    p {
-      font-size: 18px;
-      width: 80%;
-      margin: auto;
-      line-height: 1.6;
+
+    .card{
+      width:var(--card-width);
+      max-width:var(--card-max);
+      background:#fff;
+      border-radius:20px;
+      padding:28px;
+      box-shadow:0 12px 30px rgba(0,0,0,0.12);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+      animation:cardIn .9s ease;
     }
-    .card {
-      background: white;
-      padding: 25px;
-      margin-top: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
+    @keyframes cardIn{from{opacity:0;transform:scale(.98)}to{opacity:1;transform:scale(1)}}
+
+    .header-img{
+      width:84%;
+      max-width:360px;
+      height:auto;
+      border-radius:16px;
+      display:block;
+      margin:0 auto 18px;
+      box-shadow:0 10px 30px rgba(209,0,99,0.12);
+      object-fit:cover;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 12px 22px;
-      background: #ff5f6d;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: 16px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: 0.3s;
+    .no-image {
+      width:84%;
+      max-width:360px;
+      height:200px;
+      border-radius:16px;
+      margin:0 auto 18px;
+      background:linear-gradient(90deg,#ffeef6,#fff6ea);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#b24a6f;
+      font-weight:600;
+      box-shadow:0 10px 30px rgba(209,0,99,0.06);
     }
-    .btn:hover {
-      background: #ff303f;
+
+    h1{
+      margin:6px 0 10px;
+      color:var(--accent);
+      font-size:2.2rem;
+      text-shadow:0 4px 12px rgba(209,0,99,0.08);
+    }
+
+    .poem{
+      margin-top:12px;
+      font-weight:600;
+      line-height:1.8;
+      font-size:1.06rem;
+      color:#333;
+      text-align:left;
+      padding:0 20px 18px;
+    }
+
+    .line{display:flex;align-items:center;gap:10px;padding:6px 0}
+    .emoji{font-size:1.35rem; width:36px; text-align:center}
+    .text { flex:1; }
+
+    /* Balloons layer */
+    .balloons{pointer-events:none;position:fixed;inset:0;z-index:5}
+    .balloon{position:absolute;font-size:36px;opacity:.95;animation:float 6s ease-in-out infinite}
+    @keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-22px)}100%{transform:translateY(0)}}
+
+    /* Confetti pieces */
+    .confetti{pointer-events:none;position:fixed;inset:0;z-index:6}
+    .confetti .c{position:absolute;width:10px;height:14px;border-radius:3px;animation:fall linear infinite}
+    @keyframes fall{0%{transform:translateY(-120px) rotate(0deg)}100%{transform:translateY(120vh) rotate(360deg)}}
+
+    /* responsive tweaks */
+    @media (max-width:520px){
+      h1{font-size:1.7rem}
+      .poem{font-size:1rem;padding:0 12px}
+      .emoji{font-size:1.15rem;width:30px}
     }
   </style>
 </head>
 <body>
-  <h1>🎉 A Little Surprise 🎉</h1>
-  <div class="card">
-    <p>
-      Sometimes, we forget how amazing we truly are. So this little surprise page is just here to remind you:<br><br>
-      You are valued. You are appreciated. You matter more than you realize.
-      <br><br>
-      Whatever you're going through, whatever challenges you're facing — you're doing great, honestly.
-      Keep going, keep shining.
-    </p>
-    <a class="btn" href="index.html">Go Back</a>
-    <p style="margin-top:30px; font-size:1.3rem; line-height:1.8;">
-      <strong>FOUR MOST BEAUTIFUL THINGS IN THE WORLD</strong><br>
-      BUTTERFLY<br>
-      MOON<br>
-      RAINBOW<br>
-      FLOWER<br><br>
-      YOU THOUGHT I’D SAY "YOU" BUT…<br><br>
-      BUT YOU'RE NOT BEAUTIFUL —<br><br>
-      YOU ARE:<br>
-      GORGEOUS 🌸<br>
-      STUNNING ✨<br>
-      ELEGANT 💐<br>
-      RADIANT 🌟<br>
-      LOVELY 💖<br>
-      ATTRACTIVE 💞<br>
-      CHARMING 💫<br>
-      EXQUISITE 🌺<br>
-      PRETTY 💕<br>
-      BREATHTAKING 🌷<br>
-      BEAUTIFUL 🌙<br>
-      CUTIE 🧸<br>
-      POOKIE 🐣<br>
-      LUCKY CHARM 🍀<br>
-      QUEEN 👑<br>
-      PRINCESS 🩷<br>
-      PEACE 🕊️<br>
-    </p>
-    <p class="poem">
-      FOUR MOST BEAUTIFUL THINGS IN THE WORLD<br>
-      BUTTERFLY<br>
-      MOON<br>
-      RAINBOW<br>
-      FLOWER<br><br>
-      YOU THOUGHT I’LL SAY “YOU” BUT…<br><br>
-      BUT YOU'RE NOT BEAUTIFUL<br><br>
-      YOU ARE:<br>
-      GORGEOUS<br>
-      STUNNING<br>
-      ELEGANT<br>
-      RADIANT<br>
-      LOVELY<br>
-      ATTRACTIVE<br>
-      CHARMING<br>
-      EXQUISITE<br>
-      PRETTY<br>
-      BREATHTAKING<br>
-      BEAUTIFUL<br>
-      CUTIE<br>
-      POOKIE<br>
-      LUCKY CHARM<br>
-      QUEEN<br>
-      PRINCESS<br>
-      PEACE<br>
-    </p>
-  </div>
-  <!-- Decorative balloons -->
-  <div class="balloons">
-    <div class="balloon b1">🎈</div>
-    <div class="balloon b2">🎈</div>
-    <div class="balloon b3">🎈</div>
-    <div class="balloon b4">🎈</div>
-    <div class="balloon b5">🎈</div>
+
+  <!-- Balloons (decorative) -->
+  <div class="balloons" aria-hidden="true">
+    <div class="balloon" style="left:8%;top:10%;animation-duration:6s">🎈</div>
+    <div class="balloon" style="left:72%;top:8%;animation-duration:7s">🎈</div>
+    <div class="balloon" style="left:45%;top:20%;animation-duration:5.5s">🎈</div>
+    <div class="balloon" style="left:88%;top:30%;animation-duration:6.5s">🎈</div>
+    <div class="balloon" style="left:22%;top:40%;animation-duration:7.2s">🎈</div>
   </div>
 
-  <!-- Music player (user can play) -->
-  <div style="position:fixed;left:16px;bottom:16px;z-index:9999;">
-    <button id="playBtn" class="btn">Play Music</button>
-    <audio id="bgMusic" loop>
-      <!-- If you want a music file, replace src with your file name (e.g., "music.mp3") -->
-      <source src="" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
+  <!-- Confetti (script will create pieces) -->
+  <div class="confetti" aria-hidden="true"></div>
+
+  <div class="card" role="main" aria-labelledby="surpriseTitle">
+
+    <!-- IMAGE: replace ehbday.jpg must match exact filename in repo -->
+    <!-- If the image is not uploaded, the <img> will be missing; we provide a fallback block below (JS will detect) -->
+    <img id="headerImg" src="ehbday.jpg" alt="Special birthday photo" class="header-img" onerror="this.style.display='none'">
+
+    <noscript>
+      <!-- If JS is off and no image exists, user sees nothing — but still okay -->
+    </noscript>
+
+    <h1 id="surpriseTitle">Your Surprise 🎁</h1>
+
+    <div class="poem" id="poemBlock">
+      <div class="line"><div class="emoji">🌍</div><div class="text"><strong>FOUR MOST BEAUTIFUL THINGS IN THE WORLD</strong></div></div>
+
+      <div class="line"><div class="emoji">🦋</div><div class="text">BUTTERFLY</div></div>
+      <div class="line"><div class="emoji">🌙</div><div class="text">MOON</div></div>
+      <div class="line"><div class="emoji">🌈</div><div class="text">RAINBOW</div></div>
+      <div class="line"><div class="emoji">🌸</div><div class="text">FLOWER</div></div>
+
+      <div style="height:10px"></div>
+
+      <div class="line"><div class="emoji">😉</div><div class="text">YOU THOUGHT I’LL SAY “YOU” BUT…</div></div>
+
+      <div style="height:8px"></div>
+
+      <div class="line"><div class="emoji">😳</div><div class="text">BUT YOU'RE NOT BEAUTIFUL</div></div>
+
+      <div style="height:8px"></div>
+
+      <div class="line"><div class="emoji">✨</div><div class="text"><strong>YOU ARE:</strong></div></div>
+
+      <div class="line"><div class="emoji">💖</div><div class="text">GORGEOUS</div></div>
+      <div class="line"><div class="emoji">🔥</div><div class="text">STUNNING</div></div>
+      <div class="line"><div class="emoji">👑</div><div class="text">ELEGANT</div></div>
+      <div class="line"><div class="emoji">🌟</div><div class="text">RADIANT</div></div>
+      <div class="line"><div class="emoji">💗</div><div class="text">LOVELY</div></div>
+      <div class="line"><div class="emoji">😍</div><div class="text">ATTRACTIVE</div></div>
+      <div class="line"><div class="emoji">💫</div><div class="text">CHARMING</div></div>
+      <div class="line"><div class="emoji">🌹</div><div class="text">EXQUISITE</div></div>
+      <div class="line"><div class="emoji">💕</div><div class="text">PRETTY</div></div>
+      <div class="line"><div class="emoji">😮‍💨</div><div class="text">BREATHTAKING</div></div>
+      <div class="line"><div class="emoji">💞</div><div class="text">BEAUTIFUL</div></div>
+      <div class="line"><div class="emoji">🐣</div><div class="text">CUTIE</div></div>
+      <div class="line"><div class="emoji">🐻</div><div class="text">POOKIE</div></div>
+      <div class="line"><div class="emoji">🍀</div><div class="text">LUCKY CHARM</div></div>
+      <div class="line"><div class="emoji">👸</div><div class="text">QUEEN</div></div>
+      <div class="line"><div class="emoji">🌼</div><div class="text">PRINCESS</div></div>
+      <div class="line"><div class="emoji">🕊</div><div class="text">PEACE</div></div>
+    </div>
+
   </div>
-
-  <!-- Confetti + soft animations -->
-  <style>
-    .balloons { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 800; }
-    .balloon { position: absolute; font-size: 36px; opacity: 0.95; transform-origin: bottom center; }
-    .b1 { left: 8%; top: 20%; animation: floatBalloon 6s ease-in-out infinite; }
-    .b2 { left: 70%; top: 10%; animation: floatBalloon 7s ease-in-out 0.3s infinite; }
-    .b3 { left: 40%; top: 25%; animation: floatBalloon 5.5s ease-in-out 0.5s infinite; }
-    .b4 { left: 85%; top: 30%; animation: floatBalloon 6.5s ease-in-out 0.8s infinite; }
-    .b5 { left: 20%; top: 40%; animation: floatBalloon 7.2s ease-in-out 1s infinite; }
-
-    @keyframes floatBalloon {
-      0% { transform: translateY(0) scale(0.95); opacity: 0.95; }
-      50% { transform: translateY(-20px) scale(1.05); }
-      100% { transform: translateY(0) scale(0.95); }
-    }
-
-    /* Fancy poem styles */
-    .poem { margin-top: 25px; font-size: 1.2rem; line-height: 1.7; text-align: center; color: #333; }
-    .poem strong { display:block; font-size:1.4rem; margin-bottom:10px; }
-    .poem .highlight { color: #c2185b; font-weight:700; font-size:1.25rem; }
-
-    /* Confetti pieces */
-    .confetti-piece { position: fixed; top: -10px; width: 10px; height: 14px; opacity: 0.9; z-index: 700; }
-  </style>
 
   <script>
-    // confetti
+    // create confetti pieces
     (function(){
-      for (let i = 0; i < 50; i++) {
-        let c = document.createElement('div');
-        c.className = 'confetti-piece';
-        c.style.left = Math.random() * 100 + 'vw';
-        c.style.background = 'hsl(' + Math.random()*360 + ', 90%, 65%)';
-        c.style.transform = 'rotate(' + Math.random()*360 + 'deg)';
-        c.style.animation = 'confettiFall ' + (2 + Math.random()*3) + 's linear ' + Math.random() + 's infinite';
-        document.body.appendChild(c);
+      const holder = document.querySelector('.confetti');
+      for(let i=0;i<48;i++){
+        const el = document.createElement('div');
+        el.className='c';
+        el.style.left = (Math.random()*100)+'vw';
+        el.style.background = 'hsl(' + (Math.random()*360) + ',90%,65%)';
+        el.style.animationDuration = (2 + Math.random()*3) + 's';
+        el.style.animationDelay = (Math.random()*1.2) + 's';
+        holder.appendChild(el);
       }
     })();
 
-    // music play
-    document.addEventListener('DOMContentLoaded', function(){
-      const btn = document.getElementById('playBtn');
-      const audio = document.getElementById('bgMusic');
-      btn.addEventListener('click', function(){
-        if (!audio.src) {
-          alert('No music file linked. To add music, upload an mp3 and set the source in the surprise.html code.');
-          return;
-        }
-        if (audio.paused) { audio.play(); btn.textContent = 'Pause Music'; }
-        else { audio.pause(); btn.textContent = 'Play Music'; }
-      });
+    // if image missing, show fallback block text
+    window.addEventListener('load', ()=>{
+      const img = document.getElementById('headerImg');
+      if(!img || (img && img.complete && img.naturalWidth===0)){
+        // remove img if present but failed
+        if(img) img.remove();
+        // show fallback note
+        const fallback = document.createElement('div');
+        fallback.className = 'no-image';
+        fallback.textContent = 'Upload ehbday.jpg to show the surprise photo';
+        const card = document.querySelector('.card');
+        card.insertBefore(fallback, card.firstChild);
+      }
     });
   </script>
-
 </body>
 </html>
